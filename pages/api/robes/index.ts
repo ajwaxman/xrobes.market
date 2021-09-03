@@ -3,13 +3,13 @@ import pMap from 'p-map'
 import { chunk, flatten, orderBy } from 'lodash'
 import { utils as etherUtils, BigNumber } from 'ethers'
 import type { OpenseaResponse, Asset } from '../../../utils/openseaTypes'
-import RobeIDs from '../../../data/ancients-ids.json'
+import RobeIDs from '../../../data/xrobes-ids.json'
 
 const chunked = chunk(RobeIDs, 20)
 const apiKey = process.env.OPENSEA_API_KEY
 
 const fetchRobePage = async (ids: string[]) => {
-  let url = 'https://api.opensea.io/api/v1/assets?collection=lootproject&'
+  let url = 'https://api.opensea.io/api/v1/assets?collection=xloot&'
   url += ids.map((id) => `token_ids=${id}`).join('&')
 
   const res = await fetch(url, {
@@ -32,7 +32,10 @@ export const fetchRobes = async () => {
   const data = await pMap(chunked, fetchRobePage, { concurrency: 2 })
   const mapped = flatten(data)
     .filter((d) => {
-      return d.sell_orders && d.sell_orders.length > 0
+      return (
+        d.sell_orders &&
+        d.sell_orders[0].payment_token_contract.symbol == 'ETH'
+      )
     })
     .map((a: Asset): RobeInfo => {
       return {
@@ -42,7 +45,7 @@ export const fetchRobes = async () => {
             BigNumber.from(a.sell_orders[0].current_price.split('.')[0]),
           ),
         ),
-        url: a.permalink + '?ref=0xfb843f8c4992efdb6b42349c35f025ca55742d33',
+        url: a.permalink,
         svg: a.image_url,
       }
     })

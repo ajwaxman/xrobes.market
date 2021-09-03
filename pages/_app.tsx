@@ -7,14 +7,14 @@ function Robes({ Component, pageProps }) {
       <style jsx global>
         {`
           body {
-            background: #fff2d9;
-            color: #4d382f;
+            background: #ffffff;
+            color: #000000;
             overflow-x: hidden;
           }
         `}
       </style>
       <Head>
-        <title>Ancient Adventurers</title>
+        <title>xrobes.market</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
@@ -22,14 +22,14 @@ function Robes({ Component, pageProps }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@ajwaxman" />
-        <meta property="og:url" content="https://ancients.market" />
-        <meta property="og:title" content="ancients.market" />
+        <meta property="og:url" content="https://xrobes-market.vercel.app" />
+        <meta property="og:title" content="xrobes.market" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           property="og:description"
           content="See the floor price of Ancient Helms from the Loot project."
         />
-        <meta property="og:image" content="https://ancients.market/ancients.png" />
+        <meta property="og:image" content="https://xrobes-market.vercel.app/xrobes.png" />
       </Head>
     </>
   )

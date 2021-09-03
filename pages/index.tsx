@@ -34,11 +34,10 @@ const Robe = ({ robe }: { robe: RobeInfo }) => {
 const IndexPage = ({ robes, lastUpdate }: Props) => {
   return (
     <div className="py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 pt-10 md:w-screen">
-      <img className="w-20 md:w-28" src="helmet.png" alt="Ancient Helmet"></img>
-      <h1 className="text-lg md:text-3xl font-bold">The Ancient Adventurers</h1>
+      <h1 className="text-lg md:text-3xl font-bold">Divine Robes</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
         <p className="md:text-lg">
-          There are {robes.length} Ancient Helm bags for sale, with a floor
+          There are {robes.length} Divine robe bags for sale, with a floor
           price of {robes[0].price} ETH.
         </p>
         <p className="md:text-lg pt-2">
@@ -58,11 +57,11 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
           >
             @worm_emoji
           </a>
-          . Join the{' '}
+          . Join the xLoot{' '}
           <a
             target="_blank"
             className="underline"
-            href="https://discord.gg/ZaDzFdbc"
+            href="https://discord.gg/cMCHxQt5"
           >
             Discord
           </a>
