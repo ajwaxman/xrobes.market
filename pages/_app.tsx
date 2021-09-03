@@ -27,7 +27,7 @@ function Robes({ Component, pageProps }) {
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           property="og:description"
-          content="See the floor price of Ancient Helms from the Loot project."
+          content="See the floor price of Divine Robes from the xLoot project."
         />
         <meta property="og:image" content="https://xrobes-market.vercel.app/xrobes.png" />
       </Head>
