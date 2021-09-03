@@ -1,6 +1,4 @@
-# ancients.market
-
-this is the repo that powers [ancients.market](https://ancients.market).
+# xrobes.market
 
 It's forked from https://github.com/ylukem/robes.market
 
